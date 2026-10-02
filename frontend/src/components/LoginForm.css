@@ -1,0 +1,377 @@
+﻿
+.login-card-wrapper {
+  width: 100%;
+  max-width: 410px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.login-card-header {
+  margin-bottom: 24px;
+}
+
+.login-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.015em;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.login-subtitle {
+  font-size: 14.5px;
+  color: #7d93ac;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.45;
+}
+
+
+.login-tabs {
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 26px;
+}
+
+.tab-btn {
+  flex: 1;
+  position: relative;
+  background: none;
+  border: none;
+  padding: 10px 0 13px 0;
+  font-family: inherit;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  text-align: center;
+}
+
+.tab-btn:hover {
+  color: #94a3b8;
+}
+
+.tab-btn.active {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.tab-indicator {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #007aff;
+  border-radius: 2px 2px 0 0;
+  box-shadow: 0 0 8px rgba(0, 122, 255, 0.6);
+}
+
+
+.login-feedback-badge {
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 18px;
+  animation: fadeIn 0.3s ease;
+}
+
+.feedback-error {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+}
+
+.feedback-success {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #6ee7b7;
+}
+
+.feedback-info {
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: #93c5fd;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-label {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #d1dbe8;
+  margin-bottom: 7px;
+}
+
+.password-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.password-label-row .form-label {
+  margin-bottom: 0;
+}
+
+.forgot-password-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: #0084ff;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.forgot-password-link:hover {
+  color: #38bdf8;
+  text-decoration: underline;
+}
+
+.input-field-wrapper {
+  display: flex;
+  align-items: center;
+  background: #111927;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  height: 46px;
+  padding: 0 14px;
+  transition: all 0.2s ease;
+}
+
+.input-field-wrapper:hover {
+  border-color: #27374d;
+}
+
+.input-field-wrapper:focus-within {
+  border-color: #007aff;
+  background: #121c2d;
+  box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.2);
+}
+
+.input-icon {
+  color: #556c88;
+  flex-shrink: 0;
+  margin-right: 12px;
+  transition: color 0.2s ease;
+}
+
+.input-field-wrapper:focus-within .input-icon {
+  color: #0084ff;
+}
+
+.form-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  height: 100%;
+}
+
+.form-input::placeholder {
+  color: #4b5e75;
+  font-size: 14px;
+}
+
+
+.checkbox-row {
+  margin-top: 2px;
+  margin-bottom: 22px;
+}
+
+.checkbox-container {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-container input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkbox-custom {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background: #111927;
+  border: 1px solid #223249;
+  border-radius: 4px;
+  margin-right: 10px;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.checkbox-container:hover .checkbox-custom {
+  border-color: #3b506e;
+}
+
+.checkbox-container input[type="checkbox"]:checked ~ .checkbox-custom {
+  background: #007aff;
+  border-color: #007aff;
+}
+
+.checkbox-container input[type="checkbox"]:checked ~ .checkbox-custom::after {
+  content: "";
+  position: absolute;
+  left: 4.5px;
+  top: 1.5px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-label-text {
+  font-size: 13.5px;
+  color: #7d93ac;
+  font-weight: 400;
+}
+
+
+.submit-btn {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background: #007aff;
+  background: linear-gradient(90deg, #006aff 0%, #0084ff 100%);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 114, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(90deg, #0a74ff 0%, #0e91ff 100%);
+  box-shadow: 0 6px 20px rgba(0, 114, 255, 0.45);
+  transform: translateY(-1px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 114, 255, 0.3);
+}
+
+
+.form-divider {
+  display: flex;
+  align-items: center;
+  margin: 24px 0 20px 0;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: #162232;
+}
+
+.divider-text {
+  padding: 0 14px;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #556980;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+.social-buttons-grid {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+.social-btn {
+  flex: 1;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #111927;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.social-btn:hover {
+  background: #162033;
+  border-color: #27374d;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.social-btn:active {
+  transform: translateY(0);
+}
+
+.social-icon {
+  flex-shrink: 0;
+}
+
+
+.login-card-footer {
+  text-align: center;
+  font-size: 13.5px;
+  color: #7d93ac;
+}
+
+.create-account-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #0084ff;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.create-account-link:hover {
+  color: #38bdf8;
+  text-decoration: underline;
+}

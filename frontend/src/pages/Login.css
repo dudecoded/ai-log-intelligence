@@ -1,0 +1,251 @@
+﻿/* Main Two-Column Layout */
+.login-page-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #08101a;
+  position: relative;
+}
+
+/* =========================================
+   LEFT SECTION (55% Width)
+   ========================================= */
+.login-left-section {
+  flex: 0 0 55%;
+  width: 55%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 44px 64px 40px 64px;
+  box-sizing: border-box;
+}
+
+/* Mountain & Planet Background Artwork */
+.left-section-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* Ambient Subtle Vignette Overlay */
+.left-section-overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 50% 45%, transparent 40%, rgba(3, 10, 19, 0.28) 90%),
+    linear-gradient(180deg, rgba(2, 9, 18, 0.3) 0%, transparent 18%, transparent 72%, rgba(2, 9, 18, 0.6) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Interactive Canvas Particles */
+.left-section-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Top-Left Branding Header */
+.brand-header {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-badge-container {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.brand-logo-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 16px rgba(0, 160, 255, 0.7);
+}
+
+.brand-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand-title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.brand-title-log {
+  color: #ffffff;
+}
+
+.brand-title-lens {
+  color: #0095ff;
+}
+
+.brand-subtitle {
+  font-size: 8.5px;
+  font-weight: 600;
+  color: #8da2bd;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* Lower-Left Headline & Description */
+.left-bottom-content {
+  position: relative;
+  z-index: 5;
+  max-width: 520px;
+  margin-bottom: 4px;
+}
+
+.hero-headline {
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px 0;
+}
+
+.hero-headline-highlight {
+  background: linear-gradient(90deg, #007aff 0%, #00b4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.hero-description {
+  font-size: 14.5px;
+  color: #92a4ba;
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+  max-width: 480px;
+}
+
+/* Slide Indicators */
+.slide-indicators {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.indicator {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.indicator-pill.active {
+  width: 28px;
+  height: 4px;
+  border-radius: 2px;
+  background: #ffffff;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+.indicator-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #2b3e54;
+}
+
+.indicator-dot:hover {
+  background: #64748b;
+  transform: scale(1.2);
+}
+
+/* =========================================
+   RIGHT SECTION (45% Width)
+   ========================================= */
+.login-right-section {
+  flex: 0 0 45%;
+  width: 45%;
+  height: 100%;
+  background-color: #08101a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 40px 24px;
+}
+
+.login-form-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================================
+   RESPONSIVENESS
+   ========================================= */
+@media (max-width: 1080px) {
+  .login-left-section {
+    padding: 36px 44px 32px 44px;
+  }
+  .hero-headline {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 880px) {
+  .login-page-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .login-left-section {
+    flex: none;
+    width: 100%;
+    min-height: 420px;
+    padding: 32px 24px;
+  }
+
+  .login-right-section {
+    flex: none;
+    width: 100%;
+    min-height: calc(100vh - 420px);
+    padding: 40px 20px 60px 20px;
+  }
+
+  .hero-headline {
+    font-size: 28px;
+  }
+
+  .hero-description {
+    font-size: 13.5px;
+    margin-bottom: 20px;
+  }
+}
