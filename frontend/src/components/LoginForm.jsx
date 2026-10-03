@@ -1,8 +1,10 @@
-﻿import React, { useState } from 'react';
+﻿import { useState } from 'react';
 import { Mail, Lock } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import './LoginForm.css';
 
 export default function LoginForm() {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('login');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -23,6 +25,10 @@ export default function LoginForm() {
       type: 'success',
       text: `${activeTab === 'login' ? 'Signing in' : 'Creating account'} as ${email}...`
     });
+    if (activeTab === 'login') {
+      navigate('/dashboard');
+      return;
+    }
     setTimeout(() => setFeedback(null), 3500);
   };
 

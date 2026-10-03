@@ -1,4 +1,6 @@
-﻿import React, { useState, useEffect, useRef } from 'react';
+﻿import { useState, useEffect, useRef } from 'react';
+import { ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import mountainBg from '../assets/mountain-bg.jpg';
 import logoBadge from '../assets/loglens-logo.png';
 import LoginForm from '../components/LoginForm';
@@ -182,6 +184,10 @@ export default function Login() {
       <section className="login-right-section">
         <div className="login-form-wrapper">
           <LoginForm />
+          <Link className="dashboard-preview-link" to="/dashboard">
+            Open dashboard preview
+            <ArrowUpRight size={14} aria-hidden="true" />
+          </Link>
         </div>
       </section>
     </div>
